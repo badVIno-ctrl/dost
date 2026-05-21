@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ЖАРА — Доставка еды</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;700;900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- ШАПКА -->
+  <header class="header">
+    <div class="header-inner">
+      <div class="logo">
+        <span class="logo-icon">🔥</span>
+        <span class="logo-text">ЖАРА</span>
+      </div>
+
+      <nav class="nav">
+        <a href="#catalog" class="nav-link">Меню</a>
+        <a href="#about" class="nav-link">О нас</a>
+        <a href="#timer-section" class="nav-link">Доставка</a>
+      </nav>
+
+      <button class="cart-btn" id="cartBtn" aria-label="Корзина">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/>
+        </svg>
+        <span class="cart-count" id="cartCount">0</span>
+      </button>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-bg">
+      <div class="blob blob-1"></div>
+      <div class="blob blob-2"></div>
+      <div class="blob blob-3"></div>
+    </div>
+    <div class="hero-content">
+      <p class="hero-label">Горячая еда за 30 минут</p>
+      <h1 class="hero-title">Еда, которая<br/><span class="highlight">горит желанием</span><br/>к тебе попасть</h1>
+      <p class="hero-desc">ЖАРА — это не просто доставка. Это ритуал. Настоящая пицца, дерзкие закуски, напитки и десерты — горячими, вовремя, прямо к двери. Никаких ожиданий.</p>
+      <a href="#catalog" class="btn-hero">Смотреть меню</a>
+    </div>
+    <div class="hero-visual">
+      <div class="pizza-orbit">
+        <div class="orbit-ring"></div>
+        <div class="orbit-emoji e1">🍕</div>
+        <div class="orbit-emoji e2">🥤</div>
+        <div class="orbit-emoji e3">🍩</div>
+        <div class="orbit-emoji e4">🍗</div>
+        <div class="hero-pizza">🍕</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ТАЙМЕР ДОСТАВКИ -->
+  <section class="timer-section" id="timer-section">
+    <div class="timer-inner">
+      <p class="timer-label">Среднее время доставки сейчас</p>
+      <div class="timer-display">
+        <div class="timer-block">
+          <span class="timer-num" id="timerMin">28</span>
+          <span class="timer-unit">мин</span>
+        </div>
+        <div class="timer-sep">:</div>
+        <div class="timer-block">
+          <span class="timer-num" id="timerSec">00</span>
+          <span class="timer-unit">сек</span>
+        </div>
+      </div>
+      <div class="timer-status">
+        <span class="status-dot"></span>
+        <span>Принимаем заказы · Работаем до 02:00</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- КАТАЛОГ -->
+  <section class="catalog" id="catalog">
+    <div class="catalog-inner">
+      <div class="section-header">
+        <h2 class="section-title">Наше меню</h2>
+        <p class="section-sub">Всё свежее, всё горячее</p>
+      </div>
+
+      <!-- ФИЛЬТРЫ -->
+      <div class="filters" role="group" aria-label="Категории">
+        <button class="filter-btn active" data-filter="all">Всё меню</button>
+        <button class="filter-btn" data-filter="pizza">🍕 Пицца</button>
+        <button class="filter-btn" data-filter="drinks">🥤 Напитки</button>
+        <button class="filter-btn" data-filter="desserts">🍩 Десерты</button>
+        <button class="filter-btn" data-filter="snacks">🍗 Закуски</button>
+      </div>
+
+      <!-- СЕТКА КАРТОЧЕК -->
+      <div class="cards-grid" id="cardsGrid"></div>
+    </div>
+  </section>
+
+  <!-- О НАС -->
+  <section class="about" id="about">
+    <div class="about-inner">
+      <div class="about-text">
+        <h2 class="section-title">Почему <span class="highlight">ЖАРА</span>?</h2>
+        <p>Мы не просто доставляем еду — мы доставляем настроение. Каждая пицца выпекается в дровяной печи, каждый напиток охлаждён до идеальной температуры. Мы помешаны на деталях.</p>
+        <ul class="about-list">
+          <li><span class="about-icon">⚡</span> Доставка за 30 минут или скидка 20%</li>
+          <li><span class="about-icon">🔥</span> Только свежие ингредиенты каждый день</li>
+          <li><span class="about-icon">❤️</span> 4.9 рейтинг · 12 000+ довольных клиентов</li>
+          <li><span class="about-icon">🌙</span> Работаем до 2 ночи</li>
+        </ul>
+      </div>
+      <div class="about-stats">
+        <div class="stat-card">
+          <span class="stat-num">30</span>
+          <span class="stat-label">минут доставки</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-num">12K+</span>
+          <span class="stat-label">заказов в месяц</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-num">4.9</span>
+          <span class="stat-label">средний рейтинг</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-num">24</span>
+          <span class="stat-label">позиции в меню</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- КОРЗИНА (БОКОВАЯ ПАНЕЛЬ) -->
+  <div class="cart-overlay" id="cartOverlay"></div>
+  <aside class="cart-panel" id="cartPanel" aria-label="Корзина">
+    <div class="cart-header">
+      <h3 class="cart-title">Корзина</h3>
+      <button class="cart-close" id="cartClose" aria-label="Закрыть">✕</button>
+    </div>
+
+    <div class="cart-body" id="cartBody">
+      <div class="cart-empty" id="cartEmpty">
+        <span class="cart-empty-icon">🛒</span>
+        <p>Корзина пуста</p>
+        <span>Добавьте что-нибудь вкусное</span>
+      </div>
+      <ul class="cart-items" id="cartItems"></ul>
+    </div>
+
+    <div class="cart-footer" id="cartFooter" style="display:none">
+      <div class="cart-total">
+        <span>Итого:</span>
+        <span class="cart-total-price" id="cartTotalPrice">0 ₽</span>
+      </div>
+      <div class="cart-delivery-note">
+        <span class="delivery-status-dot"></span>
+        Доставка ~28 мин · Бесплатно от 800 ₽
+      </div>
+      <div class="cart-free-bar-wrap" id="freeBarWrap">
+        <div class="cart-free-bar">
+          <div class="cart-free-fill" id="cartFreeFill"></div>
+        </div>
+        <span class="cart-free-label" id="cartFreeLabel"></span>
+      </div>
+    </div>
+  </aside>
+
+  <!-- ТОСТ-УВЕДОМЛЕНИЕ -->
+  <div class="toast" id="toast"></div>
+
+  <!-- ФУТЕР -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="logo">
+        <span class="logo-icon">🔥</span>
+        <span class="logo-text">ЖАРА</span>
+      </div>
+      <p class="footer-desc">Горячая еда с доставкой. Каждый день, до 02:00.</p>
+      <p class="footer-copy">© 2025 ЖАРА. Сделано с огнём.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
